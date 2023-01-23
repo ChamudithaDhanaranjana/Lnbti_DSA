@@ -2,7 +2,7 @@ class PreOrder
 {
 	TreeNode root;
 	
-	public static void main(String[] args) throws Exception 
+	public static void main(String[] args)
 	{
 		PreOrder po = new PreOrder(); 
 		PreOrder.TreeNode root = new PreOrder.TreeNode("A"); 
@@ -14,23 +14,24 @@ class PreOrder
 		po.root.right.right = new PreOrder.TreeNode("F");
 		
 		System.out.println("Binary Tree in Pre-Order using recusion"); 
-		po.preOrder();
 	}
 	
 	static class TreeNode 
 	{ 
 		String data; 
-		TreeNode left, right; 
+		TreeNode left,
+		TreeNode right; 
 		
 		TreeNode(String value) 
 		{ 
-			this.data = value; 
-			left = right = null; 
+			data = value; 
+			left = null;
+			right = null; 
 		} 
 		
 		boolean isLeaf() 
 		{ 
-			return left == null ? right == null : false; 
+			return left == null ? right == null : false
 		} 
 	}
 	

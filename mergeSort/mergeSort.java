@@ -4,7 +4,7 @@ class mergeSort
 	{
 		if(array.length <= 1) 
 		{
-			
+			return array;
 		}
 		
 		int mid = array.length / 2; //is the midpoint of the array.

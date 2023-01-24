@@ -46,7 +46,7 @@ class mergeSort
 		int[] result = new int[array.length];//length of the result should be same as the array
 		
 		
-		left = mergeSort(right);//recursion
+		left = mergeSort(left);//recursion
 		right = mergeSort(right);
 		
 		

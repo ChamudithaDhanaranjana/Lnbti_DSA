@@ -47,13 +47,13 @@ class Test
 
 	public static void main (String[] args)
 	{
-		Stack<Integer> stack = new Stack<Integer>();
+		Stack<Integer> stack = new Stack<Integer<();
 
 		stack_push(stack);
 		stack_pop(stack);
 		stack_push(stack);
 		stack_peek(stack);
 		stack_search(stack, 2);
-		stack_search(stack, 6);
+		stack_search(stack, 2);
 	}
 }

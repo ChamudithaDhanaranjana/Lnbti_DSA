@@ -14,24 +14,25 @@ class PreOrder
 		po.root.right.right = new PreOrder.TreeNode("F");
 		
 		System.out.println("Binary Tree in Pre-Order using recusion"); 
+		po.preOrder();
 	}
 	
 	static class TreeNode 
 	{ 
 		String data; 
-		TreeNode left,
+		TreeNode left;
 		TreeNode right; 
 		
 		TreeNode(String value) 
 		{ 
-			data = value; 
+			this.data = value; 
 			left = null;
 			right = null; 
 		} 
 		
 		boolean isLeaf() 
 		{ 
-			return left == null ? right == null : false
+			return left == null ? right == null : false;
 		} 
 	}
 	

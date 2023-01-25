@@ -105,6 +105,7 @@ public class MaxHeap
 
      public static void main(String...arg)
     {
+
 		System.out.println("The Max Heap is ");
         MaxHeap maxHeap = new MaxHeap(15);
         maxHeap.insert(5);
@@ -119,8 +120,8 @@ public class MaxHeap
         maxHeap.maxHeap();
  
         maxHeap.print();
-        System.out.println("The max value is " + maxHeap.remove());
 
+        System.out.println("The max value is " + maxHeap.remove());
     }
 
 }

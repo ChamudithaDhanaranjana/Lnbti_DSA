@@ -7,7 +7,12 @@ class Deletion_on_a_BST {
         int key;
         Node left, right;
  
-        
+        Node(int key)
+        {
+            this.key = key;
+            left = null;
+            right = null;
+        }
     }
  
     static Node root;
@@ -62,7 +67,14 @@ class Deletion_on_a_BST {
     {
         if (root == null)
             return;
- 
+		
+		if (root.left == null && root.right == null) {
+            if (root.key == key) {
+                root = null;
+                return;
+            }
+            else
+                return;
         }
  
         Queue<Node> q = new LinkedList<Node>();

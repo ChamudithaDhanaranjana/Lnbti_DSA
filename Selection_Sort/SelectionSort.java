@@ -18,6 +18,13 @@ class SelectionSort
             arr[i] = temp;
         }
     }
+	void printArray(int arr[])
+    {
+        int n = arr.length;
+        for (int i=1; i<n; ++i)
+            System.out.print(arr[i]+" ");
+        System.out.println();
+    }
 
     public static void main(String args[])
     {

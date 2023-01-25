@@ -20,9 +20,16 @@ class Inorder
 		{
 			
 			inorder (node.LeftChild);
-			System.out.print (node.value);
+			System.out.print (node.value+" ");
 			inorder (node.RightChild);
 		}
+	}
+
+	void print (Node node)
+	{
+		System.out.print ("In-order\t:");
+		inorder (node);
+		System.out.println ("\n");
 	}
 	
 	
@@ -56,7 +63,7 @@ class Inorder
 		root = bst.insert (root, 55);
 		root = bst.insert (root, 43);
 		
-		
+		bst.print(root);
 		
 	}
 	

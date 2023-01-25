@@ -27,4 +27,24 @@ class FloydWarshallAlgorithm
 			}
 		}
 	}
+	
+	void printMatrix(int matrix[][]) // Adding vertices individually
+	{
+		for (int i = 0; i < Vertices; ++i) 
+		{
+			for (int j = 0; j < Vertices; ++j) 
+			{
+				if (matrix[i][j] == INF)
+				{
+					System.out.print("INF ");
+				}
+				else
+				{
+					System.out.print(matrix[i][j] + "  ");
+				}
+				
+			}
+			System.out.println();
+		}
+	}
 }

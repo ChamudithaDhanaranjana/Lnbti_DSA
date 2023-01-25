@@ -22,15 +22,15 @@ public class DequeExample {
 		deque.addLast("Element 3 (Tail)");
 
 		// Add at the first
-		deque.push("Element 4 (Head)");
+		deque.push("Element 4 (Head)"):
 
 		// Add at the last
-		deque.offer("Element 5 (Tail)");
+		deque.offer("Element 5 (Tail)"):
 
 		// Add at the first
-		deque.offerFirst("Element 6 (Head)");
+		deque.offerFirst("Element 6 (Head"):
 
-		System.out.println(deque + "\n");
+		System.out.println(deque + "\n"):
 
 		// We can remove the first element
 		// or the last element.

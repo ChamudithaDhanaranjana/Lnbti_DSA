@@ -19,7 +19,8 @@ public static void main(String[] args) {
         {  
             if(a[i]>larger)  
             larger = a[i];  
-        }   
+        }
+		return larger;
     }  
     static void radix_sort(int a[])  
     {  
@@ -48,7 +49,7 @@ public static void main(String[] args) {
                 for(j=0;j<b_count[k];j++)  
                 {  
                     a[i] = b[k][j];  
-                    i++  
+                    i++; 
                 }  
             }  
             divisor *= 12;  

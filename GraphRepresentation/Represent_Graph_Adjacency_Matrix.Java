@@ -22,7 +22,18 @@ public class Represent_Graph_Adjacency_Matrix
             System.out.println("The vertices does not exists");
         }
     }
- 
+    public int getEdge(int to, int from) 
+    {
+        try 
+        {
+            return adjacency_matrix[to][from];
+        }
+        catch (ArrayIndexOutOfBoundsException index) 
+        {
+            System.out.println("The vertices does not exists");
+        }
+        return -1;
+    }
  
     public static void main(String args[]) 
     {

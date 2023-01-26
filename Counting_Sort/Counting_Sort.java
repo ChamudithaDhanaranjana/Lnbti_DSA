@@ -6,10 +6,10 @@ class Counting_Sort {
 		  if(a[i] > max)  
 			 max = a[i];  
 	  }  
-	  return max; //maximum element from the array  
+	  return max; //get maximum element from the array  
 	}  
 	  
-	void countSort(int[] a, int n) // function to perform counting sort  
+	void countingSort(int[] a, int n)  
 	{  
 	   int[] output = new int [n+1];  
 	   int max = getMax(a, n);  
@@ -23,13 +23,13 @@ class Counting_Sort {
 		
 	  for (int i = 0; i < n; i++) // Store the count of each element  
 	  {  
-		count[a[i]]++;  
+		count[a[i]]++ 
 	  }  
 	  
 	  for(int i = 1; i<=max; i++)   
 		count[i] += count[i-1]; //find cumulative frequency  
 	  
-	  /* This loop will find the index of each element of the original array in  count array, and place the elements in output array*/  
+	  
 	  for (int i = n - 1; i >= 0; i--) {  
 		output[count[a[i]] - 1] = a[i];  
 		count[a[i]]--; // decrease count for same numbers  
@@ -46,6 +46,18 @@ class Counting_Sort {
 		int i;  
 		for (i = 0; i < n; i++)  
 			System.out.print(a[i] + " ");  
+	}
+	public static void main(String args[])  
+	{  
+		int a[] = { 658, 533, 458, 5, 1205, 788, 369, 448 };  
+		int n = a.length;  
+		CountingSort c1 = new CountingSort();  
+		System.out.println("\nBefore sorting array - ");  
+		c1.printArray(a, n);  
+		c1.countSort(a,n);  
+		System.out.println("\nAfter sorting array using Counting Sort - ");  
+		c1.printArray(a, n);  
+		System.out.println();  
 	}  
   
 } 

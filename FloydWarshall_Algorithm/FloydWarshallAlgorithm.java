@@ -47,4 +47,24 @@ class FloydWarshallAlgorithm
 			System.out.println();
 		}
 	}
+	
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+        //System.out.println("Floyd Warshall Algorithm");
+        FloydWarshallAlgorithm a = new FloydWarshallAlgorithm();
+ 
+        System.out.println("Enter number of vertices\n");//no of vertices
+        int vertices = scan.nextInt();
+ 
+        System.out.println("\nEnter matrix\n")
+        int[][] path = new int[vertices][vertices];
+        for (int i = 0; i < vertices; i++)
+            for (int j = 0; j < vertices; j++)
+                path[i][j] = scan.nextInt();
+		
+		
+		System.out.println("\nOutput matrix\n");
+		a.floydWarshallAlgorithm(path);
+	}
 }

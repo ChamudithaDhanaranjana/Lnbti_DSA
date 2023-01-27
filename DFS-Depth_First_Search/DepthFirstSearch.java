@@ -1,6 +1,5 @@
 class DepthFirstSearch {
-	
-	private class Node {
+	class Node {
 		int data;
 		Node left;
 		Node right;
@@ -16,20 +15,36 @@ class DepthFirstSearch {
 			return;
 		}
 		
-		Stack<Node> nodeStack = new Stack<Node>();
-		nodeStack.push(root);
+	Stack<Node> nodestack = new Stack<Node>();
+	nodestack.push(root);
 		
-		while(!nodeStack.isEmpty()) {
-			Node node = nodeStack.pop();
+		while(!nodestack.isEmpty()) {
+			Node node = nodestack.pop();
 			System.out.print(node.data + " ");
 			
 			if(node.right != null) {
-				nodeStack.push(node.right);
+				nodestack.push(node.right);
 			}
 			if(node.left != null) {
-				nodeStack.push(node.left);
+				nodestack.push(node.left);
 			}
 		}
 	}
+	
+	public static void main(String args[]) {
+		Node root = new Node(11);
+		root.left = new Node(7);
+		root.right = new Node(23);
+		root.left.left = new Node(3);
+		root.left.right = new Node(9);
+		root.right.left = new Node(15);
+		root.right.right = new Node(28);
+		root.right.left.left = new Node (14);
+		root.right.left.right = new Node(20);
+		
+		DepthFirstSearch dfs = new DepthFirstSearch();
+		dfs.depthFirstSearch(root);
+	}
 }
+ 
 

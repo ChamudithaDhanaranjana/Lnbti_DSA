@@ -28,6 +28,7 @@ class FloydWarshallAlgorithm
 				}
 			}
 		}
+		printMatrix(matrix);
 	}
 	
 	void printMatrix(int matrix[][]) // Adding vertices individually

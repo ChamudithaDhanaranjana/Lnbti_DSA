@@ -23,7 +23,7 @@ class Counting_Sort {
 		
 	  for (int i = 0; i < n; i++) // Store the count of each element  
 	  {  
-		count[a[i]]++ 
+		count[a[i]]++; 
 	  }  
 	  
 	  for(int i = 1; i<=max; i++)   
